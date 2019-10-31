@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Fiche Enseignant</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let user of enseignants">
+    <ion-card-header>
+      <h1>{{ user.nom_ens }}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <h2>Né(e) le: {{ user.naiss_ens }}</h2>
+      <h2>CIN: {{ user.cin_ens }}</h2>
+      <h2>Adresse: {{ user.adr_ens }}</h2>
+      <h2>Tel: {{ user.tel_ens }}</h2>
+      <h2>Occupation: {{ user.occup_ens }}</h2>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

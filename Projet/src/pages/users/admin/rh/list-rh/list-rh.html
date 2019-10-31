@@ -1,0 +1,32 @@
+<ion-header color="dark">
+    <ion-navbar>
+      <ion-title>Ressource Humaine</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+      <ion-list-header margin-vertical text-center><h1>Liste des Membres RH</h1></ion-list-header>
+      <ion-item-sliding *ngFor='let user of ressources;'>
+        <ion-item>
+          <h2>N° : {{ user.id_rh }}</h2>
+          <h2>Nom et prenom : {{ user.nom_rh }}</h2>
+        </ion-item>
+      <ion-item-options side='right'>
+        <button ion-button color="dark" (click)="fiche(user.id_rh)">
+          <ion-icon icon name="eye"></ion-icon>
+          Detail
+        </button>
+        <button ion-button color="dark" (click)="modifRh(user.id_rh,user.nom_rh,user.naiss_rh,user.cin_rh,user.adr_rh,user.tel_rh,user.occup_rh)">
+            <ion-icon icon name="brush"></ion-icon>
+            Modifier
+          </button>
+        <button ion-button color="danger" (click)="delRh(user.id_rh)">
+          <ion-icon icon name="trash"></ion-icon>
+          Supprimer
+        </button>
+      </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-content>
+  

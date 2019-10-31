@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Ressource Humaine</ion-title>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content padding>
+  <ion-list>
+    <ion-list-header><h1>Inscription</h1></ion-list-header>
+    <ion-item>
+      <ion-label floating>Nom et prenom</ion-label>
+      <ion-input type="text"  class="ion-input" [(ngModel)]="nom_rh" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date de naissance</ion-label>
+      <ion-input type="date" class="ion-input" [(ngModel)]="naiss_rh"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>CIN</ion-label>
+      <ion-input type="number" class="ion-input" [(ngModel)]="cin_rh"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Adresse</ion-label>
+      <ion-input type="text" class="ion-input" [(ngModel)]="adr_rh"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>N° Telephone</ion-label>
+      <ion-input type="number" class="ion-input" [(ngModel)]="tel_rh"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Occupation</ion-label>
+      <ion-input type="text" class="ion-input" [(ngModel)]="occup_rh"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Mot de passe</ion-label>
+      <ion-input type="password" class="ion-input" [(ngModel)]="pass_rh"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Confirmer mot de passe</ion-label>
+      <ion-input type="password" class="ion-input" [(ngModel)]="conf_pass"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div>
+    <button ion-button block color="dark" (click)="addRh()">S'inscrir</button>
+  </div>
+</ion-content>
+  

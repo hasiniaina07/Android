@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Accueil - RH</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let member of members">
+    <ion-item>
+      <h2>Bienvenue {{ member.nom_rh }}</h2>
+    </ion-item>
+    <ion-row>
+      <ion-item>
+        <h2>Gerer Les utilisateurs</h2>
+      </ion-item>
+      <ion-item>
+          <button ion-button block color="dark" (click)="listRh()">Ressource Humaine</button>
+      </ion-item>
+      <ion-item>
+        <button ion-button block color="dark" (click)="listEns()">Enseignant</button>
+    </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+          <div>Deconnexion</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="person"></ion-icon>
+          <div>Profile</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
